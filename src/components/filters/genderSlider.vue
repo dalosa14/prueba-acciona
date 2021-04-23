@@ -1,9 +1,9 @@
 <template>
   <v-row>
-      <v-col cols="2">
-          <h4>Genero</h4>
+      <v-col cols="4" class="d-flex  align-center justify-center">
+          <h4>Género</h4>
       </v-col>
-    <v-col cols="10">
+    <v-col cols="8" class="d-flex  align-center justify-center">
       <v-slider
         :tick-labels="genders"
         v-model="selectedGender"

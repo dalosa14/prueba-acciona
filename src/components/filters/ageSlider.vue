@@ -1,10 +1,10 @@
 <template>
 
-      <v-row class="d-flex justify-center align-center">
-          <v-col cols="2">
+      <v-row >
+          <v-col cols="4" class="d-flex  align-center justify-center">
               <h4>Edad</h4>
           </v-col>
-        <v-col cols="10" >
+        <v-col cols="8" class="d-flex  align-center justify-center">
           <v-range-slider
             v-on:mouseup="setAgeFilter"
             v-model="range"
