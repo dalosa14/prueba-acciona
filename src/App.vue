@@ -24,5 +24,8 @@ export default {
   data: () => ({
     //
   }),
+  mounted(){
+    this.$store.dispatch("getNationalities");
+  }
 };
 </script>

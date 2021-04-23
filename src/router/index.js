@@ -10,7 +10,7 @@ const routes = [
     component: () => import('../views/vista1.vue')
   },
   {
-    path: '/favs',
+    path: '/profile/:id',
     name: 'vista2',
     component: () => import('../views/vista2.vue')
   },

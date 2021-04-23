@@ -41,6 +41,10 @@ export default {
   methods: {
     getProfiles() {
       this.$store.dispatch("getProfiles");
+      
+    },
+    getNationalities() {
+      
     },
   },
 };
