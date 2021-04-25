@@ -1,16 +1,16 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-  </div>
+  <v-row>
+      <titleHeader></titleHeader>
+    </v-row>
 </template>
 
 <script>
-// @ is an alias to /src
+import title from '../components/utilities/title.vue'
 
 export default {
   name: 'Home',
   components: {
-    
+    titleHeader:title
   }
 }
 </script>

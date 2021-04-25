@@ -20,6 +20,10 @@ export default new Vuex.Store({
     getAllProfiles(state) {
       return state.profiles;
     },
+    getProfileById(state) {
+      return id => state.profiles.find((profile)=>profile.login.uuid == id)
+      
+    },
     getAllProfilesWithFilters(state) {
       let filteredProfiles = state.profiles;
       let { gender, age } = state.filters;
