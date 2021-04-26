@@ -15,7 +15,7 @@ const routes = [
     component: () => import('../views/vista2.vue')
   },
   {
-    path: '/',
+    path: '/favs',
     name: 'vista3',
     component: () => import('../views/vista3.vue')
   },
