@@ -4,6 +4,7 @@
 ```
 Url página web: https://prueba-acciona-saul.onrender.com/
 Url backend: https://prueba-acciona-backend-saul.onrender.com/
+Ver listas de favoritos EndPoint: https://prueba-acciona-backend-saul.onrender.com/getFavProfilesLists
 
 ```
 ## GitHub backend
