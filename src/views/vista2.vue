@@ -23,7 +23,7 @@
           <l-marker :lat-lng="latLngOfProfile" :icon="icon" /> </l-map
       ></v-col>
       <v-col cols="12" md="2" class="d-flex justify-center align-center"
-        ><v-btn icon color="pink" x-large>
+        ><v-btn @click="isFavProfile ? removeProfileFav() : addProfileFav()" icon :color="isFavProfile ? 'pink' : 'grey'" x-large>
           <v-icon>mdi-heart</v-icon>
         </v-btn></v-col
       >
@@ -67,10 +67,11 @@
         </v-row>
       </v-col>
     </v-row>
+    
     <divider></divider>
     <v-row class="ma-0 pa-0 ">
       <v-col cols="12" class="d-flex justify-center align-center ma-0 pa-0 ">
-        <v-btn to="/" dark fab color="primary" class="ma-0 pa-0 mb-4">
+        <v-btn to="/"  dark fab color="primary" class="ma-0 pa-0 mb-4">
           <v-icon>mdi-arrow-left</v-icon></v-btn
         >
       </v-col>
@@ -96,7 +97,6 @@ export default {
   data() {
     return {
       zoom: 13,
-
       url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors. <b>Saúl García</b>',
@@ -116,21 +116,18 @@ export default {
       let coords = this.profileById.location.coordinates;
       return latLng(coords.latitude, coords.longitude);
     },
+    isFavProfile(){
+      return this.$store.getters.isFavProfile(this.$route.params.id)
+    }
   },
-  methods: {},
+  methods: {
+    addProfileFav(){
+      this.$store.commit('addProfileFav',this.profileById.login.uuid)
+    },
+    removeProfileFav(){
+      this.$store.commit('removeProfileFav',this.profileById.login.uuid)
+    }
+  },
+  
 };
 </script>
-
-<style>
-.someExtraClass {
-  background-color: aqua;
-  padding: 10px;
-  border: 1px solid #333;
-  border-radius: 0 20px 20px 20px;
-  box-shadow: 5px 3px 10px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  width: auto !important;
-  height: auto !important;
-  margin: 0 !important;
-}
-</style>

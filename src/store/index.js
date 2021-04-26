@@ -12,6 +12,7 @@ export default new Vuex.Store({
     },
     profiles: [],
     nationalities: [],
+    favs:[]
   },
   getters: {
     getAllNationalities(state) {
@@ -22,6 +23,14 @@ export default new Vuex.Store({
     },
     getProfileById(state) {
       return id => state.profiles.find((profile)=>profile.login.uuid == id)
+      
+    },
+    getFavProfiles(state,getters) {
+      return state.profiles.filter((profile)=>getters.isFavProfile(profile.login.uuid))
+      
+    },
+    isFavProfile(state) {
+      return id => state.favs.includes(id)
       
     },
     getAllProfilesWithFilters(state) {
@@ -65,6 +74,12 @@ export default new Vuex.Store({
     setSelectedNats(state, selectedNats) {
       state.filters.nats = selectedNats;
     },
+    addProfileFav(state, id) {
+      state.favs.push(id);
+    },
+    removeProfileFav(state, id) {
+      state.favs = state.favs.filter(fav=>fav !=id);
+    },
   },
   actions: {
     async getProfiles(context) {
@@ -89,6 +104,7 @@ export default new Vuex.Store({
         return;
       }
     },
+    
   },
   modules: {},
 });
