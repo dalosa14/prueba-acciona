@@ -10,6 +10,11 @@ Url backend: https://prueba-acciona-backend-saul.onrender.com/
 ```
 https://github.com/dalosa14/backend-Acciona
 ```
+
+## Aviso 
+
+Las url y cors han sido configurados para el deploy en Render.com.
+
 ## Project setup
 ```
 npm install
