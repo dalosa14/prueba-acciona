@@ -1,4 +1,10 @@
-# prueba-acciona-pwa
+# Prueba Acciona FrontEnd
+
+## Desplegado con render en:
+```
+Url página web: https://prueba-acciona-saul.onrender.com/
+Url backend: https://prueba-acciona-backend-saul.onrender.com/
+```
 
 ## Project setup
 ```
@@ -15,10 +21,3 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
