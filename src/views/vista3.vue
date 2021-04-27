@@ -31,7 +31,7 @@
           color="secondary"
           :disabled="!getFavProfiles.length || listName == ''"
           @click="sendFavProfilesList"
-          >Descargar perfiles favoritos</v-btn
+          >Enviar perfiles favoritos</v-btn
         >
       </v-col></v-row
     >
