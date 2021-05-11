@@ -1,6 +1,6 @@
 # Prueba Acciona FrontEnd
 
-## Desplegado con render en:
+## Desplegado con render y heroku en:
 ```
 Url página web: https://prueba-acciona-saul.onrender.com/
 Url backend: https://acciona-backend.herokuapp.com
