@@ -3,8 +3,8 @@
 ## Desplegado con render en:
 ```
 Url página web: https://prueba-acciona-saul.onrender.com/
-Url backend: https://prueba-acciona-backend-saul.onrender.com/
-Ver listas de favoritos EndPoint: https://prueba-acciona-backend-saul.onrender.com/getFavProfilesLists
+Url backend: https://acciona-backend.herokuapp.com
+Ver listas de favoritos EndPoint: https://acciona-backend.herokuapp.com/getFavProfilesLists
 
 ```
 ## GitHub backend
