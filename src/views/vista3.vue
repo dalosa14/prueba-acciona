@@ -76,7 +76,7 @@ export default {
     sendFavProfilesList() {
       try {
         this.axios.post(
-          "https://prueba-acciona-backend-saul.onrender.com/addFavProfilesList",
+          "https://acciona-backend.herokuapp.com/addFavProfilesList",
           {name:this.listName,data:this.transformData(this.getFavProfiles)}
         );
         this.popUp.type = "success";
